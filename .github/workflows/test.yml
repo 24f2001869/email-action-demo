@@ -1,0 +1,22 @@
+name: Test Workflow with Email
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: 24f2001869@ds.study.iitm.ac.in
+        run: echo "Hello from IITM email step!"
+        
+      - name: Regular test step
+        run: echo "This is a normal test step"
+        
+      - name: Final step
+        run: echo "Workflow completed successfully"
